@@ -17,7 +17,3 @@ export async function fetchProductData(productId: string): Promise<IProduct> {
 
   return productSnap.data();
 }
-
-fetchProductData('2e9166fa-4084-49f5-bb9b-5873e51277f3')
-  .then((productData) => console.log(productData))
-  .catch((e) => console.log(e));

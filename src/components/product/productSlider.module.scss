@@ -1,0 +1,54 @@
+.slider_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &:hover .slider_btn {
+    opacity: 80%;
+  }
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 200ms ease;
+
+  img {
+    display: block;
+    width: 100%;
+    flex: 0 0 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+.slider_btn {
+  background-color: transparent;
+  z-index: 5;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0%;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+
+.slider_btn_icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.slider_btn___prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.slider_btn___next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
