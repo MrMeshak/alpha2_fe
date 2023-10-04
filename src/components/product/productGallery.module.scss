@@ -1,0 +1,16 @@
+@use '../../styles/abstracts';
+
+.productGallery {
+  display: none;
+
+  gap: 1rem;
+
+  @include abstracts.media-query('md') {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @include abstracts.media-query('lg') {
+    grid-template-columns: 1fr 1fr;
+  }
+}

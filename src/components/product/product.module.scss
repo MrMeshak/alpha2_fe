@@ -1,0 +1,25 @@
+@use '../../styles/abstracts';
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include abstracts.media-query('md') {
+    padding: calc(1rem + 3vw);
+    grid-template-columns: 3fr 2fr;
+    gap: calc(1rem + 3vw);
+  }
+
+  @include abstracts.media-query('xl') {
+    grid-template-columns: 4fr 2fr;
+  }
+
+  &_info {
+    width: 100%;
+    padding: 1.5rem;
+
+    @include abstracts.media-query('md') {
+      padding: 0rem;
+    }
+  }
+}

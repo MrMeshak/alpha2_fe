@@ -1,0 +1,24 @@
+.productSelector {
+  padding: 1rem 0rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.selectorBtn {
+  width: 4rem;
+  padding: 0.25rem;
+  background-color: white;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &___active {
+    border: 2px black solid;
+  }
+}

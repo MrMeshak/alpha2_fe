@@ -1,0 +1,20 @@
+@use '../../styles/abstracts';
+
+.productHeader {
+  padding-bottom: 1.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+}

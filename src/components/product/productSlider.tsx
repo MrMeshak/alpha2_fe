@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './productSlider.module.scss';
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from '../utils/icons/icons';
+import { IProduct_SliderData } from './resolvers/productSliderResolver';
 
 export interface IProductSliderProps {
-  images: string[];
+  productSliderData: IProduct_SliderData;
 }
 
-export default function ProductSlider({ images }: IProductSliderProps) {
+export default function ProductSlider({ productSliderData }: IProductSliderProps) {
+  const images = productSliderData.images;
   const [sliderIndex, setSliderIndex] = useState(0);
 
   const handleNextBtn = () => {
@@ -31,7 +33,7 @@ export default function ProductSlider({ images }: IProductSliderProps) {
       </button>
       <div className={styles.slider} style={{ transform: `translateX(${-100 * sliderIndex}%)` }}>
         {images.map((imageUrl, index) => (
-          <img src={imageUrl} alt={`product image ${index}`} key={'productImage' + index} />
+          <img src={imageUrl} alt={`product image ${index}`} key={'productImageSlider' + index} />
         ))}
       </div>
       <div className={styles.slider_indicators}></div>

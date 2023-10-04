@@ -1,9 +1,15 @@
+@use '../../styles/abstracts';
+
 .slider_container {
   position: relative;
   width: 100%;
   overflow: hidden;
   &:hover .slider_btn {
     opacity: 80%;
+  }
+
+  @include abstracts.media-query('md') {
+    display: none;
   }
 }
 

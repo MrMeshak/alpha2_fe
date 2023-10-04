@@ -1,0 +1,53 @@
+@use '../../styles/abstracts';
+
+.productForm {
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &_submitBtn {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: abstracts.$grey-900;
+  }
+}
+
+.quantityInputField {
+  width: 100%;
+  height: 3rem;
+  padding: 0.3rem;
+  display: flex;
+  border: 2px solid abstracts.$grey-900;
+  border-radius: 0.5rem;
+
+  button {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+  }
+
+  input {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
