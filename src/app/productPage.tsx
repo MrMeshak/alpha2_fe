@@ -1,7 +1,6 @@
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import { fetchProductData } from '../services/fetchProductData';
-import ProductSlider from '../components/product/productSlider';
+import { fetchProduct } from '../services/fetchProduct';
 import Product from '../components/product/product';
 
 export interface IProductPageProps {}
@@ -14,7 +13,7 @@ export default function ProductPage(props: IProductPageProps) {
     isError,
     error
   } = useQuery({
-    queryFn: () => fetchProductData(productId),
+    queryFn: () => fetchProduct(productId),
     queryKey: ['products', productId]
   });
 
