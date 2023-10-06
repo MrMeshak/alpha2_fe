@@ -1,9 +1,19 @@
+import { useQuery } from 'react-query';
+import { fetchProducts } from '../services/fetchProducts';
+import { fetchProductsByCategory } from '../services/fetchProductsByCategory';
+
 export interface IHomePageProps {}
 
 export default function HomePage(props: IHomePageProps) {
-  return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
-  );
+  const queryProducts = useQuery({
+    queryFn: () => fetchProducts(),
+    queryKey: ['products']
+  });
+
+  const queryProductsFeatured = useQuery({
+    queryFn: () => fetchProductsByCategory('featured'),
+    queryKey: ['products', 'featured']
+  });
+
+  return <div></div>;
 }

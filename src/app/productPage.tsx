@@ -10,11 +10,10 @@ export default function ProductPage(props: IProductPageProps) {
   const {
     data: productData,
     isLoading,
-    isError,
-    error
+    isError
   } = useQuery({
     queryFn: () => fetchProduct(productId),
-    queryKey: ['products', productId]
+    queryKey: ['product', productId]
   });
 
   if (isLoading) {

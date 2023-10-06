@@ -1,0 +1,16 @@
+@use '../../styles/abstracts';
+
+.productList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(0.8rem + 2vw);
+
+  @include abstracts.media-query('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include abstracts.media-query('xxl') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,36 @@
+@use '../../styles/abstracts';
+
+.productListCard {
+  &:hover a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+  }
+
+  &_image {
+    padding: 1rem;
+    border: 3px solid abstracts.$grey-200;
+    border-radius: 1rem;
+  }
+
+  &_info {
+    padding: 0.5rem 1rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: calc(1.4rem + 0.6vw);
+    }
+  }
+
+  &_price {
+    span {
+      font-weight: 400;
+      font-size: calc(1rem + 0.6vw);
+    }
+  }
+}

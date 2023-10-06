@@ -12,8 +12,14 @@ export default function ProductHeader({ productHeaderData }: IProductHeaderProps
       <h2>
         {productHeaderData.subtitle}, <span>{productHeaderData.size}</span>
       </h2>
-      <h3>${productHeaderData.price}</h3>
-      {productHeaderData.previousPrice && <p>previous price: {productHeaderData.previousPrice}</p>}
+      <p className={styles.productHeader_price}>
+        <span>${productHeaderData.price}</span>
+      </p>
+      {productHeaderData.previousPrice && (
+        <p className={styles.productHeader_prevPrice}>
+          previous price: <span>${productHeaderData.previousPrice}</span>
+        </p>
+      )}
     </div>
   );
 }

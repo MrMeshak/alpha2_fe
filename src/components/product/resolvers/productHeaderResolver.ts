@@ -25,7 +25,6 @@ export function productHeaderResolver(productData: IProduct, variantIndex: numbe
   let previousPrice: string | undefined;
   if (variant.price.discount === 0) {
     price = (variant.price.base / 100).toFixed(2);
-    previousPrice = undefined;
   } else {
     price = ((variant.price.base - variant.price.discount) / 100).toFixed(2);
     previousPrice = (variant.price.base / 100).toFixed(2);

@@ -3,7 +3,7 @@ import { productsCol } from '../firestore/client.js';
 import { EmptyInputError, NotFoundError } from './types/error.types.js';
 import { IProduct } from '../firestore/schema.js';
 
-export async function fetchProductData(productId: string): Promise<IProduct> {
+export async function fetchProduct(productId: string): Promise<IProduct> {
   if (productId === '') {
     throw new EmptyInputError('Error: could not fetch data as productId was empty');
   }
