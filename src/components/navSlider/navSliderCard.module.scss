@@ -1,0 +1,21 @@
+@use '../../styles/abstracts';
+
+.navSliderCard {
+  width: 100%;
+  aspect-ratio: 1/1;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  background-color: abstracts.$grey-900;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: abstracts.$grey-700;
+
+  h3 {
+    color: abstracts.$grey-100;
+    font-size: calc(1.2rem + 0.3vw);
+    padding-bottom: 0.2rem;
+  }
+}

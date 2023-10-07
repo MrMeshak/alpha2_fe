@@ -65,3 +65,26 @@ export const LeftArrowIcon = ({ className = '', fill = 'none', stroke = 'current
     </svg>
   );
 };
+
+export const RightArrowSquareIcon = ({ className = '', fill = 'none', stroke = 'currentColor', strokeWidth = '1.5' }: IIconProps) => {
+  return (
+    <svg className={className} width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <title>Iconly/Light/Arrow - Right Square</title>
+      <g id="Iconly/Light/Arrow---Right-Square" stroke={stroke} strokeWidth={strokeWidth} fill={fill} fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
+        <g
+          id="Arrow---Right-Square"
+          transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(2.000000, 2.000000)"
+          stroke={stroke}
+          strokeWidth={strokeWidth}
+        >
+          <path
+            d="M5.6659,19.25 L14.3349,19.25 C17.3549,19.25 19.2499,17.111 19.2499,14.084 L19.2499,5.916 C19.2499,2.889 17.3649,0.75 14.3349,0.75 L5.6659,0.75 C2.6359,0.75 0.7499,2.889 0.7499,5.916 L0.7499,14.084 C0.7499,17.111 2.6359,19.25 5.6659,19.25 Z"
+            id="Stroke-1"
+          ></path>
+          <line x1="9.9999" y1="14.086" x2="9.9999" y2="5.914" id="Stroke-3"></line>
+          <polyline id="Stroke-5" points="13.7479 10.3223 9.9999 14.0863 6.2519 10.3223"></polyline>
+        </g>
+      </g>
+    </svg>
+  );
+};

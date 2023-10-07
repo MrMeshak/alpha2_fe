@@ -1,0 +1,18 @@
+.navSlider {
+  padding: 1rem calc(0.5rem + 5vw);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(9rem, 21%, 15rem);
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-padding: 0rem;
+
+  &___snapsInline {
+    scroll-snap-type: inline mandatory;
+
+    & > * {
+      scroll-snap-align: start;
+    }
+  }
+}
