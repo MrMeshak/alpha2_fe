@@ -1,10 +1,27 @@
 @use '../../styles/abstracts';
 
 .productListCard {
+  width: 100%;
+  position: relative;
   &:hover a {
     text-decoration: underline;
     text-underline-offset: 2px;
     text-decoration-thickness: 2px;
+  }
+
+  &_favBtn {
+    position: absolute;
+    top: -0.8rem;
+    right: -0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   &_image {
@@ -25,6 +42,20 @@
       font-weight: 600;
       font-size: calc(1.4rem + 0.6vw);
     }
+
+    &_title {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+        border: none;
+        svg {
+          height: 100%;
+        }
+      }
+    }
   }
 
   &_price {
@@ -33,4 +64,25 @@
       font-size: calc(1rem + 0.6vw);
     }
   }
+
+  &_favBtn {
+    btn {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.heartOutlineIcon {
+  width: calc(1rem + 3vw);
+  height: calc(1rem + 3vw);
+  color: abstracts.$grey-300;
+  :hover {
+    stroke: abstracts.$grey-700;
+  }
+}
+
+.heartSolidIcon {
+  width: calc(1rem + 3vw);
+  height: calc(1rem + 3vw);
 }

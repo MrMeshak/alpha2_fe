@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 import { fetchProduct } from '../services/fetchProduct';
 import Product from '../components/product/product';
@@ -21,7 +21,7 @@ export default function ProductPage(props: IProductPageProps) {
   }
 
   if (isError) {
-    return <div>Error occured </div>;
+    return <div>Error occurred </div>;
   }
 
   return productData && <Product productData={productData} />;

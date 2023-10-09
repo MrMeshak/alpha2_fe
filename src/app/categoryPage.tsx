@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import ProductList from '../components/productList/productList';
 import { fetchProductsByCategory } from '../services/fetchProductsByCategory';
 import Category from '../components/category/category';

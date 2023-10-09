@@ -1,9 +1,9 @@
-.navSlider {
+.productListSlider {
   padding: 1rem calc(0.5rem + 5vw);
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: clamp(9rem, 21%, 15rem);
+  grid-auto-columns: clamp(14rem, calc(10rem + 21%), 20rem);
   gap: 1rem;
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  overscroll-behavior: contain;
 }
