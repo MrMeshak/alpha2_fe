@@ -32,17 +32,19 @@ export default function Product({ productData }: IProductProps) {
   };
 
   return (
-    <div className={styles.product}>
-      <div className={styles.product_gallery}>
-        <ProductGallery productGalleryData={productGalleryData} />
-        <ProductSlider productSliderData={productSliderData} key={`productSlider-${variantIndex}`} />
+    <>
+      <div className={styles.product}>
+        <div className={styles.product_gallery}>
+          <ProductGallery productGalleryData={productGalleryData} />
+          <ProductSlider productSliderData={productSliderData} key={`productSlider-${variantIndex}`} />
+        </div>
+        <div className={styles.product_info}>
+          <ProductSelector productSelectorData={productSelectorData} handleSelection={handleSelection} />
+          <ProductHeader productHeaderData={productHeaderData} />
+          <ProductInfo productInfoData={productInfoData} />
+          <ProductForm productFormData={productFormData} onSubmit={() => {}} />
+        </div>
       </div>
-      <div className={styles.product_info}>
-        <ProductSelector productSelectorData={productSelectorData} handleSelection={handleSelection} />
-        <ProductHeader productHeaderData={productHeaderData} />
-        <ProductInfo productInfoData={productInfoData} />
-        <ProductForm productFormData={productFormData} onSubmit={() => {}} />
-      </div>
-    </div>
+    </>
   );
 }

@@ -1,9 +1,7 @@
 import styles from './homeHero.module.scss';
 import { Link } from 'react-router-dom';
 
-export interface IHomeHeroProps {}
-
-export default function HomeHero(props: IHomeHeroProps) {
+export default function HomeHero() {
   return (
     <div className={styles.homeHero}>
       <img
@@ -13,7 +11,7 @@ export default function HomeHero(props: IHomeHeroProps) {
       <h2>
         Perfect spot on the <br /> couch
       </h2>
-      <Link to="/">Explore</Link>
+      <Link to="/category/couches">Explore</Link>
     </div>
   );
 }

@@ -3,6 +3,7 @@
 .navBar {
   padding: 0.5rem calc(0.5rem + 5vw);
   display: flex;
+  justify-content: space-between;
   gap: 0.5rem;
 
   &_logo {
@@ -15,5 +16,18 @@
     font-weight: 700;
     color: abstracts.$grey-900;
     margin-top: calc(((-1em / 1.5) + 1ex) / 2);
+  }
+
+  &_links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      color: abstracts.$grey-900;
+      text-decoration: none;
+    }
   }
 }

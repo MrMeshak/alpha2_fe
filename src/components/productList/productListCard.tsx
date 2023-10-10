@@ -38,7 +38,7 @@ export default function ProductListCard({ productListCardData }: IProductListCar
         </p>
         {previousPrice && (
           <p>
-            previous price: <span>${previousPrice}</span>
+            was: <span>${previousPrice}</span>
           </p>
         )}
       </div>

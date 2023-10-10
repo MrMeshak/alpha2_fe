@@ -1,4 +1,6 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
+import { fetchFavProductIdsToLocal } from '../services/fetchFavProductIdsToLocal';
+import { setFavProductIdsToLocal } from '../services/setFavProductIdsToLocal';
 
 interface IFavProductData {
   favProductIds: string[];
@@ -12,7 +14,10 @@ export interface IFavProductsContextProps {
 }
 
 export default function FavProductsContextProvider({ children }: IFavProductsContextProps) {
-  const [favProductIds, setFavoriteProductIds] = useState<string[]>(['7d4750f7-2124-42f8-8d77-bf19e922a493']);
+  const [favProductIds, setFavoriteProductIds] = useState<string[]>(fetchFavProductIdsToLocal());
+
+  useEffect(() => setFavProductIdsToLocal(favProductIds), [favProductIds]);
+
   const toggleFavProduct = (id: string) => {
     const index = favProductIds.findIndex((productId) => productId === id);
     if (index === -1) {
