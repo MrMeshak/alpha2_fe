@@ -155,3 +155,25 @@ export const voxlovVariants: IVariant[] = [
     ]
   }
 ];
+
+const ekenasetVariantIds = ['a93952d6-e9b0-42e0-9693-0ff32e3689aa'];
+
+export const ekenasetVariants: IVariant[] = [
+  {
+    id: ekenasetVariantIds[0],
+    name: 'Ekenaset',
+    description:
+      'A slender and robust sofa inspired by 1950s Scandinavian design. Tall legs in solid wood and an angled frame enhance the retro vibe, as does the stained finish with a visible, natural grain pattern.',
+    price: { base: 79900, currency: 'AUD', discount: 5000 },
+    quantity: 25,
+    color: { name: 'Kilanda light beige', hex: '#d3c6bd' },
+    size: { l: 174, w: 78, h: 75, unit: 'cm' },
+    images: [
+      'https://www.ikea.com/au/en/images/products/ekenaeset-3-seat-sofa-kilanda-light-beige__1109716_pe870182_s5.jpg?f=xl',
+      'https://www.ikea.com/au/en/images/products/ekenaeset-3-seat-sofa-kilanda-light-beige__1109715_pe870183_s5.jpg?f=xl',
+      'https://www.ikea.com/au/en/images/products/ekenaeset-3-seat-sofa-kilanda-light-beige__1109708_pe870173_s5.jpg?f=xl',
+      'https://www.ikea.com/au/en/images/products/ekenaeset-3-seat-sofa-kilanda-light-beige__1109720_pe870187_s5.jpg?f=xl',
+      'https://www.ikea.com/au/en/images/products/ekenaeset-3-seat-sofa-kilanda-light-beige__1161814_pe889526_s5.jpg?f=xl'
+    ]
+  }
+];

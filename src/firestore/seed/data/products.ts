@@ -1,5 +1,5 @@
 import { IProduct } from '../../schema';
-import { lisboVariants, malmVariants, pinntorpVariants, voxlovVariants } from './variants.js';
+import { ekenasetVariants, lisboVariants, malmVariants, pinntorpVariants, voxlovVariants } from './variants.js';
 
 const malmProductId = '95eb08b9-01ad-4158-a6f0-8ceca0ff9071';
 
@@ -45,4 +45,15 @@ const voxlov: IProduct = {
   variants: voxlovVariants
 };
 
-export const products: IProduct[] = [malm, pinntorp, lisbo, voxlov];
+const ekenasetProductId = '3e8f791f-c246-4695-87bc-308aa9d2822a';
+
+const ekenaset: IProduct = {
+  id: ekenasetProductId,
+  name: 'Voxlov',
+  productType: 'couch',
+  categories: ['featured', 'couches'],
+  searchTags: ['couch', 'sofa'],
+  variants: ekenasetVariants
+};
+
+export const products: IProduct[] = [malm, pinntorp, lisbo, voxlov, ekenaset];
