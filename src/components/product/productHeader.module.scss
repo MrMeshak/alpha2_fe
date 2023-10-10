@@ -13,6 +13,19 @@
     padding-bottom: 0.5rem;
   }
 
+  &_title {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    &_favBtn {
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
   &_price {
     font-size: 2.2rem;
     font-weight: 700;
@@ -20,4 +33,18 @@
 
   &_prevPrice {
   }
+}
+
+.heartOutlineIcon {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: abstracts.$grey-300;
+  :hover {
+    stroke: abstracts.$grey-700;
+  }
+}
+
+.heartSolidIcon {
+  width: 1.6rem;
+  height: 1.6rem;
 }

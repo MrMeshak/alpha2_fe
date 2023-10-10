@@ -89,7 +89,7 @@ export const RightArrowSquareIcon = ({ className = '', fill = 'none', stroke = '
   );
 };
 
-export const HeartIconSolid = ({ className = 'h-6 w-6', fill = 'currentColor', stroke = 'none', strokeWidth = '1' }: IIconProps) => {
+export const HeartSolidIcon = ({ className = 'h-6 w-6', fill = 'currentColor', stroke = 'none', strokeWidth = '1' }: IIconProps) => {
   return (
     <svg className={className} width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
       <title>Iconly/Bold/Heart</title>
@@ -102,7 +102,7 @@ export const HeartIconSolid = ({ className = 'h-6 w-6', fill = 'currentColor', s
   );
 };
 
-export const HeartIconOutline = ({ className = 'h-6 w-6', fill = '#ffffff', stroke = 'currentColor', strokeWidth = '1.5' }: IIconProps) => {
+export const HeartOutlineIcon = ({ className = 'h-6 w-6', fill = '#ffffff', stroke = 'currentColor', strokeWidth = '1.5' }: IIconProps) => {
   return (
     <svg className={className} width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
       <title>Iconly/Light/Heart</title>
@@ -119,7 +119,7 @@ export const HeartIconOutline = ({ className = 'h-6 w-6', fill = '#ffffff', stro
   );
 };
 
-export const ShoppingBag = ({ className = 'h-6 w-6', fill = 'none', stroke = 'currentColor', strokeWidth = '1.5' }: IIconProps) => {
+export const ShoppingBagIcon = ({ className = 'h-6 w-6', fill = 'none', stroke = 'currentColor', strokeWidth = '1.5' }: IIconProps) => {
   return (
     <svg className={className} width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>Iconly/Light/Bag</title>

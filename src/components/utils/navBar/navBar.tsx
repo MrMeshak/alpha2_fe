@@ -1,17 +1,20 @@
 import { Link } from 'react-router-dom';
 import styles from './navBar.module.scss';
-import { HeartIconOutline, HeartIconSolid, ShoppingBag } from '../icons/icons';
+import { HeartOutlineIcon, ShoppingBagIcon } from '../icons/icons';
+import { useContext } from 'react';
+import { favProductContext } from '../../../context/favProductsContextProvider';
 
 export default function NavBar() {
+  const { favProductIds } = useContext(favProductContext);
   return (
     <div className={styles.navBar}>
       <div className={styles.navBar_logo}>α</div>
       <div className={styles.navBar_links}>
         <Link to="/">
-          <HeartIconOutline /> (5)
+          <HeartOutlineIcon /> ({favProductIds.length})
         </Link>
         <Link to="/">
-          <ShoppingBag />
+          <ShoppingBagIcon />
           (5)
         </Link>
       </div>

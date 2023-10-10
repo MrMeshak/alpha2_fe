@@ -6,9 +6,10 @@ export interface IProduct_HeaderData {
   size: string;
   price: string;
   previousPrice?: string;
+  isFavorite: boolean;
 }
 
-export function productHeaderResolver(productData: IProduct, variantIndex: number): IProduct_HeaderData {
+export function productHeaderResolver(productData: IProduct, variantIndex: number, favProductIds: string[]): IProduct_HeaderData {
   const productType = productData.productType;
   const variant = productData.variants[variantIndex];
 
@@ -30,11 +31,14 @@ export function productHeaderResolver(productData: IProduct, variantIndex: numbe
     previousPrice = (variant.price.base / 100).toFixed(2);
   }
 
+  const isFavorite = favProductIds.includes(productData.id);
+
   return {
     title,
     subtitle,
     size,
     price,
-    previousPrice
+    previousPrice,
+    isFavorite
   };
 }
